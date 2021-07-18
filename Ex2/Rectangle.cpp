@@ -14,6 +14,16 @@ Rectangle::Rectangle(int p1_x, int p1_y, int p2_x, int p2_y){
 
 }
 
+int Rectangle::area(){
+
+    int distx = this->p2.x - this->p1.x;
+    int disty = this->p2.y - this->p1.y;
+
+    // Add one to each distance to account for the points in the borders of the rectangle
+    return (distx + 1) * (disty + 1);
+
+}
+
 bool intersects(Rectangle Rect1, Rectangle Rect2){
 
     if(Rect2.p1.x > Rect1.p2.x || Rect1.p1.x > Rect2.p2.x)
