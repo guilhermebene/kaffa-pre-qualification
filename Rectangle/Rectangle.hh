@@ -8,4 +8,5 @@ class Rectangle{
         } p1, p2;
 };
 
-bool intersects(Rectangle Rect1, Rectangle Rect2);
+bool intersects(Rectangle Rect1, Rectangle Rect2); // Exercise 2
+int areaOfIntersection(Rectangle Rect1, Rectangle Rect2); // Exercise 3
