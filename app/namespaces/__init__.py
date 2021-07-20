@@ -1,7 +1,7 @@
 from flask_restx import Api
 
 from .namespaceEx6 import api as nsEx6
-from .namespaceTODO import api as nsTODO
+from .namespaceEx4 import api as nsEx4
 
 api = Api(
     title='My KAFFA-PRE-EVALUATION API',
@@ -9,5 +9,5 @@ api = Api(
     description='KAFFA PRE-EVALUATION',
 )
 
+api.add_namespace(nsEx4, path='/Ex4/todo')
 api.add_namespace(nsEx6)
-api.add_namespace(nsTODO)

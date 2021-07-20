@@ -4,7 +4,7 @@ from flask_restx import Resource, Api, Namespace, fields
 
 from services import save_new_todo, get_all_todos, delete_todo
 
-api = Namespace('todo', description='To-do routes')
+api = Namespace('Ex4', description='To-do routes')
 
 class TodoDto:
     todo = api.model('todo', {
