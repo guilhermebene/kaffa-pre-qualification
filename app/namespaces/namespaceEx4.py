@@ -1,3 +1,5 @@
+"""Defines Ex4 routes and Data Transfer Object (DTO)"""
+
 from flask import request
 
 from flask_restx import Resource, Api, Namespace, fields
@@ -13,7 +15,7 @@ class TodoDto:
         'creation_date': fields.String
     })
 
-@api.route('/new')
+@api.route('/new', methods=['POST'])
 # @api.param('content', 'To-do text')
 @api.response(404, 'TO-DO could not be added')
 @api.response(201, 'TO-DO created')
@@ -24,11 +26,11 @@ class TodoNew(Resource):
         
         data = request.json
         status = save_new_todo(data)
-
+        
         if status is not True:
             api.abort(404, 'TO-DO could not be added')
 
-@api.route('/all')
+@api.route('/all', methods=['GET'])
 @api.response(200, 'Found TO-DOs')
 class TodoList(Resource):
     @api.doc('Get all TO-DOs')
@@ -37,7 +39,7 @@ class TodoList(Resource):
         return get_all_todos()
 
 
-@api.route('/delete')
+@api.route('/delete', methods=['POST'])
 # @api.param('id', 'To-do id')
 @api.response(404, 'TO-DO could not be deleted')
 @api.response(200, 'Deleted TO-DO')

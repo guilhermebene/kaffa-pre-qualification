@@ -1,3 +1,5 @@
+"""Defines main server api and namespaces for each route"""
+
 from flask_restx import Api
 
 from .namespaceEx6 import api as nsEx6

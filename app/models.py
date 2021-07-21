@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from main import db
 
 class Todo(db.Model):
+    """TO-DO model in database"""
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     content = db.Column(db.String(500), nullable=False)

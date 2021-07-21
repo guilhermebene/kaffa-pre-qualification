@@ -1,3 +1,5 @@
+"""Service functions to deal with TO-DOs in database"""
+
 from main import db
 from models import Todo
 

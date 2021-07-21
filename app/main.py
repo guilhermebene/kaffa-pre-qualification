@@ -1,3 +1,5 @@
+"""Main server app configuration"""
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 

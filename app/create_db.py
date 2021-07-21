@@ -1,3 +1,5 @@
+""""Create new database"""
+
 from pathlib import Path
 
 from main import db, DB_NAME
