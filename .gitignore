@@ -111,6 +111,7 @@ ENV/
 env.bak/
 venv.bak/
 kaffa/
+kaffa-env/
 
 # Spyder project settings
 .spyderproject
