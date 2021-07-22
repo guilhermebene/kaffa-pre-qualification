@@ -14,9 +14,6 @@
         ></b-form-textarea>
 
     <b-button variant="primary" @click="onCreateTODO">Create TO-DO</b-button>
-        <!-- <b-card-text> -->
-        <!-- {{todo.content}} -->
-        <!-- </b-card-text> -->
         </b-card>
     <b-col align-v='center'>
           <b-card
@@ -36,9 +33,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
-// import todoCard from '@/components/todoCard.vue';
 import axios from 'axios';
 export default {
   name: 'Ex4',

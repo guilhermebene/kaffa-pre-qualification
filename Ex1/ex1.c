@@ -32,7 +32,7 @@ int main(){
         if(aux == '\n')
             // If the user types '\n' too early
             if(number_counter < CNPJ_LENGTH - 1){
-                printf("Invalid CNPJ (too small)");
+                printf("Invalid CNPJ (too small)\n");
                 return -1;
             }
             // If the CNPJ is completely typed
@@ -51,11 +51,6 @@ int main(){
             number_counter++;
         }
     }
-
-    // printf("Numbers received: ");
-    // for(int j=0; j<CNPJ_LENGTH; j++)
-        // printf("%d", cnpj[j]);
-    // printf("\n");
 
     if(punct_invalid){
         printf("Invalid CNPJ punctuation\n");

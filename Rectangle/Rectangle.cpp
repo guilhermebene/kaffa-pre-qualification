@@ -5,6 +5,10 @@
 
 // Rectangle constructor
 Rectangle::Rectangle(int p1_x, int p1_y, int p2_x, int p2_y){
+    /*
+    Defines a Rectangle. No matter which 2 vertices are given to create
+    the rectangle, this class keeps the bottom left and top right ones.
+    */
 
     this->p1.x = std::min(p1_x, p2_x);
     this->p1.y = std::min(p1_y, p2_y);
@@ -19,12 +23,18 @@ int Rectangle::area(){
     int distx = this->p2.x - this->p1.x;
     int disty = this->p2.y - this->p1.y;
 
-    // Add one to each distance to account for the points in the borders of the rectangle
+    // Add one to each distance to account for the points 
+    // in the borders of the rectangle
     return (distx + 1) * (disty + 1);
 
 }
 
+// Exercise 2
 bool intersects(Rectangle Rect1, Rectangle Rect2){
+    /*
+    Checks if rectangles do not intersect, otherwise
+    returns true
+    */
 
     if(Rect2.p1.x > Rect1.p2.x || Rect1.p1.x > Rect2.p2.x)
         return false;
@@ -39,6 +49,10 @@ bool intersects(Rectangle Rect1, Rectangle Rect2){
 
 // Exercise 3
 int areaOfIntersection(Rectangle Rect1, Rectangle Rect2){
+    /*
+    If rectangles intersect, defines a new rectangle from
+    their intersection and calculates its area
+    */
 
     int p1_x;
     int p2_x;

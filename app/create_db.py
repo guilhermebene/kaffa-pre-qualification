@@ -7,7 +7,6 @@ from models import *
 
 def create_db():
 
-    # if Path('./' + DB_NAME).exists():
     db.session.remove()
     db.drop_all()
     db.create_all()

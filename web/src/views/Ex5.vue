@@ -1,7 +1,6 @@
 <template>
     <div>
     <b-container fluid='sm'>
-    <!-- <b-row align-v='center'> -->
     <b-card
         bg-variant="dark"
         text-variant="white"
@@ -26,14 +25,12 @@
         Time: {{times.utc.time}}
         </b-card-text>
     </b-card>
-    <!-- </b-row> -->
     </b-container>
 
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 // import todoCard from '@/components/todoCard.vue';
 import axios from 'axios';
